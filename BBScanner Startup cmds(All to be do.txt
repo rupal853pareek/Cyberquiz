@@ -1,0 +1,38 @@
+BBScanner Startup cmds(All to be done in "BB-Scanner" present in dir: \\wsl.localhost\kali-linux\home\CITintern\BB_Scanner)
+
+[wsl root user/pass:CITIntern/24168005]
+
+Create 4 Terminals in the above mentioned directory.
+in all, 
+do: source venv/bin/activate
+do: cd BB-Scanner
+then do the following:
+Rooted Terminals preferred
+1. ZAP: /usr/local/zaproxy/zap.sh -daemon -host 0.0.0.0 -port 8080 -config api.disablekey=true
+	Accessible Via: [http://localhost:8080/]
+2. [11434]OLLAMA: ollama serve
+
+3. Backend uvicorn: uvicorn app:app --host 0.0.0.0 --port 8000 
+	Accessible Via: [http://localhost:8000/docs#]
+4. npm(in the /frontend dir): npm run dev
+	Accessible Via: [http://127.0.0.1:3000/]
+
+
+
+10.2.6.164
+172.23.224.191
+
+For any Update/Support required, Please Contact Bishwas(******4326). and After the update is done, kindly do the following to post the changes in the local repository.
+
+
+For syncing to the changes made remotely:
+
+to Remove the compiled files to reduce the clutter in the program files:
+find . -name "__pycache__" -type d -exec rm -rf {} +
+find . -name "*.pyc" -delete
+
+Do the above and then start the pull procedure below.
+
+to pull changes from the remote repository[use personal network] while being in ~/BB_Scanner/BB-Scanner [WSL] : git pull 
+
+
